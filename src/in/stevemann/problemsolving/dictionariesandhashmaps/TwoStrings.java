@@ -38,12 +38,12 @@ public class TwoStrings {
 
 
         // ----------------- APPROACH 2 -------------------------
-        set1.retainAll(set2);
-        if (set1.isEmpty()) {
-            return "NO";
-        } else {
-            return "YES";
-        }
+//        set1.retainAll(set2);
+//        if (set1.isEmpty()) {
+//            return "NO";
+//        } else {
+//            return "YES";
+//        }
 
 
         // ----------------- APPROACH 3 -------------------------
@@ -57,6 +57,13 @@ public class TwoStrings {
 //        }
 //        return "NO";
 
+        // ----------------- APPROACH 4 -------------------------
+        for (char c : "abcdefghijklmnopqrstuvwxyz".toCharArray()) {
+            if (s1.indexOf(c) > -1 && s2.indexOf(c) > -1) {
+                return "YES";
+            }
+        }
+        return "NO";
 
     }
 
